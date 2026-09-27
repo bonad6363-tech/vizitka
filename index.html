@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Надежда Борискина — сайты, AI-сервисы и автоматизации</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#F7F6F3;--surface:#FFFFFF;--ink:#2A2359;--muted:#726F99;--violet:#9B3FA0;--pink:#2E5EA6;--sun:#8FC1E3;--line:#E7DFC9;
+--tint-violet:#F5EEF7;--tint-blue:#EEF4FA;--tint-lilac:#F6EFF4;--tint-slate:#F0F2F6;
+--accent-violet:#9B3FA0;--accent-blue:#2E5EA6;--accent-lilac:#A56B9A;--accent-slate:#6B7C99;
+--line-soft:color-mix(in srgb,var(--line) 70%,white);
+--shadow:0 10px 28px -18px color-mix(in srgb,var(--ink) 35%,transparent);
+--shadow-hover:0 18px 36px -16px color-mix(in srgb,var(--ink) 42%,transparent);
+--shadow-case:0 16px 40px -20px color-mix(in srgb,var(--ink) 40%,transparent);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:
+radial-gradient(circle at 12% 0%,color-mix(in srgb,var(--sun) 28%,transparent),transparent 52%),
+radial-gradient(circle at 92% 8%,color-mix(in srgb,var(--violet) 14%,transparent),transparent 48%),
+radial-gradient(circle at 70% 35%,color-mix(in srgb,var(--pink) 10%,transparent),transparent 45%),
+var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Unbounded,Manrope,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+@media(min-width:480px){.wrap{padding:0 20px}}
+section{padding:72px 0}
+@media(min-width:800px){section{padding:96px 0}}
+h2{font-size:clamp(26px,5vw,36px);margin-bottom:28px;font-weight:700}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;font-weight:700}
+.hero{padding:8px 0 72px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;right:0;top:-40px;height:min(520px,70vw);background:
+radial-gradient(ellipse at 20% 30%,color-mix(in srgb,var(--sun) 26%,transparent),transparent 60%),
+radial-gradient(ellipse at 85% 20%,color-mix(in srgb,var(--violet) 16%,transparent),transparent 55%);
+pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:1}
+@media(min-width:800px){.hero{padding:20px 0 96px}}
+.hero-grid{display:grid;gap:22px;align-items:center}
+.portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 18px 42px -16px color-mix(in srgb,var(--ink) 45%,transparent),0 0 0 8px color-mix(in srgb,var(--sun) 18%,transparent)}
+.hero-copy h1{font-size:clamp(34px,8vw,64px);font-weight:700;letter-spacing:-.03em;max-width:11em}
+.subtitle{margin:14px 0 0;max-width:22em;font-weight:700;font-size:clamp(18px,2.4vw,22px);line-height:1.35;color:color-mix(in srgb,var(--ink) 88%,var(--pink))}
+.lead{max-width:36em;color:var(--muted);margin:14px 0 26px;font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--violet),var(--pink));color:#fff;font-weight:700;text-decoration:none;border:1px solid color-mix(in srgb,var(--sun) 55%,white);cursor:pointer;font:inherit;font-weight:700;box-shadow:0 8px 22px -10px color-mix(in srgb,var(--violet) 70%,transparent);text-align:center;transition:box-shadow .25s ease,transform .25s ease}
+.btn.alt{background:color-mix(in srgb,var(--surface) 80%,transparent);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.service-grid{display:grid;gap:16px}
+.service-card{position:relative;background:var(--surface);border:1px solid var(--line-soft);border-radius:24px;padding:22px 22px 24px 26px;box-shadow:var(--shadow);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;overflow:hidden}
+.service-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:24px 0 0 24px}
+.service-card:nth-child(1){background:linear-gradient(165deg,var(--tint-violet),var(--surface) 70%)}
+.service-card:nth-child(1)::before{background:var(--accent-violet)}
+.service-card:nth-child(2){background:linear-gradient(165deg,var(--tint-blue),var(--surface) 70%)}
+.service-card:nth-child(2)::before{background:var(--accent-blue)}
+.service-card:nth-child(3){background:linear-gradient(165deg,var(--tint-lilac),var(--surface) 70%)}
+.service-card:nth-child(3)::before{background:var(--accent-lilac)}
+.service-card:nth-child(4){background:linear-gradient(165deg,var(--tint-slate),var(--surface) 70%)}
+.service-card:nth-child(4)::before{background:var(--accent-slate)}
+.service-card h3{font-size:18px;margin-bottom:8px}
+.service-card p{margin:0;color:var(--muted)}
+@media(hover:hover){
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.btn:hover{box-shadow:0 12px 28px -10px color-mix(in srgb,var(--violet) 75%,transparent)}
+}
+.skills-panel{background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--tint-blue) 45%,var(--surface)));border:1px solid var(--line-soft);border-radius:24px;padding:20px 22px 22px;box-shadow:var(--shadow)}
+.skill-list{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.skill-list li{position:static;padding:10px 16px;border-radius:999px;border:1px solid var(--line-soft);font-size:15px;line-height:1.35;box-shadow:0 4px 12px -10px color-mix(in srgb,var(--ink) 30%,transparent)}
+.skill-list li::before{content:none}
+.skill-list li:nth-child(6n+1){background:var(--tint-violet)}
+.skill-list li:nth-child(6n+2){background:var(--tint-blue)}
+.skill-list li:nth-child(6n+3){background:var(--tint-lilac)}
+.skill-list li:nth-child(6n+4){background:var(--tint-slate)}
+.skill-list li:nth-child(6n+5){background:var(--tint-blue)}
+.skill-list li:nth-child(6n){background:var(--tint-violet)}
+.tools{margin:18px 0 0;color:color-mix(in srgb,var(--muted) 88%,white);font-size:14px;line-height:1.55}
+.cases{display:grid;gap:28px}
+.case{background:var(--surface);border:1px solid var(--line-soft);border-radius:28px;overflow:hidden;box-shadow:var(--shadow-case)}
+.case:nth-child(1){background:linear-gradient(135deg,color-mix(in srgb,var(--tint-violet) 80%,white),color-mix(in srgb,var(--tint-blue) 70%,white))}
+.case:nth-child(1) .case-visual{background:linear-gradient(160deg,color-mix(in srgb,var(--violet) 8%,var(--tint-violet)),color-mix(in srgb,var(--pink) 8%,var(--tint-blue)))}
+.case:nth-child(2){background:linear-gradient(135deg,var(--tint-blue),var(--tint-slate))}
+.case:nth-child(2) .case-visual{background:linear-gradient(160deg,color-mix(in srgb,var(--sun) 22%,white),var(--tint-slate))}
+.case-visual{padding:18px}
+.case-visual img{width:100%;height:auto;object-fit:contain;border-radius:16px;border:1px solid var(--line-soft);background:var(--surface);box-shadow:0 12px 28px -18px color-mix(in srgb,var(--ink) 35%,transparent)}
+.case-body{padding:24px 22px 28px}
+.case-body h3{font-size:clamp(20px,3vw,28px);margin-bottom:12px}
+.case-body p{margin:0 0 20px;color:var(--muted)}
+.steps{display:grid;gap:14px;padding:0;margin:0;counter-reset:s}
+.steps li{list-style:none;counter-increment:s;background:var(--surface);border-radius:20px;padding:22px 20px;border:1px solid var(--line-soft);box-shadow:var(--shadow)}
+.steps li:nth-child(1){background:linear-gradient(165deg,var(--tint-violet),var(--surface) 75%)}
+.steps li:nth-child(2){background:linear-gradient(165deg,var(--tint-blue),var(--surface) 75%)}
+.steps li:nth-child(3){background:linear-gradient(165deg,var(--tint-lilac),var(--surface) 75%)}
+.steps li:nth-child(4){background:linear-gradient(165deg,var(--tint-slate),var(--surface) 75%)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,var(--sun),color-mix(in srgb,var(--violet) 22%,var(--sun)));color:#1E1A3C;font:700 16px Unbounded,sans-serif;margin-bottom:14px;box-shadow:0 6px 14px -8px color-mix(in srgb,var(--pink) 45%,transparent)}
+.steps b{display:block;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:15px}
+.contact{background:
+radial-gradient(ellipse at 15% 0%,color-mix(in srgb,var(--violet) 28%,transparent),transparent 55%),
+radial-gradient(ellipse at 90% 100%,color-mix(in srgb,var(--pink) 30%,transparent),transparent 50%),
+linear-gradient(145deg,var(--ink),color-mix(in srgb,var(--pink) 35%,var(--ink)));
+color:var(--bg);border-radius:32px;padding:40px 22px;margin-bottom:40px;box-shadow:var(--shadow-case)}
+.contact h2{margin-bottom:12px}
+.contact p{margin:0 0 24px;max-width:32em;opacity:.88}
+.contact .btn{background:linear-gradient(135deg,#fff,color-mix(in srgb,var(--sun) 25%,white));color:var(--ink);border:1px solid color-mix(in srgb,var(--sun) 40%,white);box-shadow:0 10px 28px -12px color-mix(in srgb,#000 45%,transparent);font-weight:700}
+@media(hover:hover){.contact .btn:hover{box-shadow:0 14px 32px -10px color-mix(in srgb,#000 50%,transparent);transform:translateY(-2px)}}
+.contact-meta{display:grid;gap:10px;margin:22px 0 0;padding:0;list-style:none;font-size:16px}
+.contact-meta a{color:var(--bg);text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--bg) 45%,transparent)}
+.contact-meta span{opacity:.78}
+footer{padding:0 0 32px;color:var(--muted);font-size:14px}
+@media(max-width:479px){
+.hero .row,.case-body .btn,.contact .btn{width:100%}
+.skill-list li{font-size:14px;padding:9px 14px}
+}
+@media(min-width:640px){
+.service-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:800px){
+.hero-grid{grid-template-columns:minmax(0,1fr) 280px;gap:48px}
+.hero-copy{order:1}
+.portrait{order:2;width:280px;height:280px;border-width:6px;justify-self:end}
+.case{display:grid;grid-template-columns:1.2fr .9fr;align-items:stretch}
+.case-visual{display:flex;align-items:center;padding:24px;border-right:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
+.case-body{padding:36px 36px 36px 32px;display:flex;flex-direction:column;justify-content:center}
+.case-body .btn{align-self:flex-start}
+.steps{grid-template-columns:repeat(4,1fr)}
+.contact{padding:56px 48px}
+}
+@media(min-width:640px) and (max-width:799px){
+.steps{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><span>Надежда Борискина</span></header>
+
+<main>
+<section class="hero">
+<div class="hero-grid">
+<img class="portrait" src="images/portrait.jpg" width="900" height="900" alt="Надежда Борискина">
+<div class="hero-copy">
+<h1>Надежда Борискина</h1>
+<p class="subtitle">Создаю сайты, AI-сервисы и автоматизации для малого бизнеса</p>
+<p class="lead">Выпускница школы Нейросетей и СММ Ксении Барановой. Помогаю превратить идею в понятный digital-продукт — от структуры и дизайна до рабочего проекта.</p>
+<div class="row">
+<a class="btn" href="#projects">Посмотреть проекты</a>
+<a class="btn alt" href="https://t.me/NadezdaBoriskina" target="_blank" rel="noopener">Написать в Telegram</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2>Что я делаю</h2>
+<div class="service-grid">
+<article class="service-card">
+<h3>Сайты и лендинги</h3>
+<p>Создаю понятные современные сайты для бизнеса и экспертов.</p>
+</article>
+<article class="service-card">
+<h3>Интернет-магазины</h3>
+<p>Продумываю каталог, карточки товаров, корзину и пользовательский путь.</p>
+</article>
+<article class="service-card">
+<h3>Telegram-боты и автоматизация</h3>
+<p>Создаю ботов и автоматизации для контента и бизнес-задач.</p>
+</article>
+<article class="service-card">
+<h3>AI-сервисы</h3>
+<p>Использую возможности искусственного интеллекта при создании digital-продуктов.</p>
+</article>
+</div>
+</section>
+
+<section id="skills">
+<h2>Мои навыки</h2>
+<div class="skills-panel">
+<ul class="skill-list">
+<li>создание сайтов и лендингов</li>
+<li>разработка Telegram-ботов</li>
+<li>интеграция ИИ</li>
+<li>создание интерфейсов</li>
+<li>разработка логики digital-проектов</li>
+<li>адаптация сайтов под мобильные устройства</li>
+</ul>
+<p class="tools">Инструменты: ChatGPT • Cursor • VS Code • GitHub • HTML • CSS • JavaScript</p>
+</div>
+</section>
+
+<section id="projects">
+<h2>Мои проекты</h2>
+<div class="cases">
+<article class="case">
+<div class="case-visual">
+<!-- Финальный скриншот: замените файл images/pulse.jpg -->
+<img src="images/pulse.jpg" width="1024" height="576" alt="Интерфейс сервиса PULSE">
+</div>
+<div class="case-body">
+<h3>PULSE — AI-сервис для бизнеса</h3>
+<p>Разработала структуру и дизайн сервиса, интерфейс основных блоков и мобильную версию. Продумала пользовательский путь и визуальную систему проекта.</p>
+<a class="btn" href="https://bonad6363-tech.github.io/pulse-landing/" target="_blank" rel="noopener">Посмотреть проект →</a>
+</div>
+</article>
+
+<article class="case">
+<div class="case-visual">
+<img src="images/aquasota.jpg" width="1440" height="584" alt="Главная страница сайта АКВАСОТА 2">
+</div>
+<div class="case-body">
+<h3>АКВАСОТА — сайт фильтров для воды</h3>
+<p>Доработала существующий сайт: обновила дизайн, каталог и карточки товаров, переработала графику и мобильную версию. Подготовила сайт к публикации.</p>
+<a class="btn" href="https://bonad6363-tech.github.io/Aquasota2/" target="_blank" rel="noopener">Посмотреть сайт →</a>
+</div>
+</article>
+</div>
+</section>
+
+<section id="process">
+<h2>Как я работаю</h2>
+<ol class="steps">
+<li><b>Знакомимся</b><span>Обсуждаем задачу и результат.</span></li>
+<li><b>Продумываю решение</b><span>Определяю структуру, функции и стиль.</span></li>
+<li><b>Создаю проект</b><span>Собираю дизайн и рабочую версию.</span></li>
+<li><b>Проверяем и запускаем</b><span>Исправляем детали и готовим проект к использованию.</span></li>
+</ol>
+</section>
+
+<section id="contact" style="padding-bottom:0">
+<div class="contact">
+<h2>Есть идея? Давайте обсудим</h2>
+<p>Расскажите, какой проект хотите создать. Обсудим задачу и подберём подходящее решение.</p>
+<a class="btn" href="https://t.me/NadezdaBoriskina" target="_blank" rel="noopener">Написать в Telegram</a>
+<ul class="contact-meta">
+<li><span>E-mail:</span> <a href="mailto:bonad6363@gmail.com">bonad6363@gmail.com</a></li>
+<li><span>Телефон:</span> <a href="tel:+358468904668">+358 46 890 4668</a></li>
+</ul>
+</div>
+</section>
+</main>
+<footer>© Надежда Борискина</footer>
+</div>
+</body>
+</html>

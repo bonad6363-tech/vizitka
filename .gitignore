@@ -1,0 +1,7 @@
+backup-original.html
+preview/
+_*/
+*.pyc
+.DS_Store
+Thumbs.db
+.chrome*/
